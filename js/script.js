@@ -34,12 +34,12 @@ function showFooter() {
             <div class="row justify-content-center">
               <div class="col-12 text-center footer-content">
                 <div class="footer-title text-white">
-                  <h1 class="fw-bold">Medicindex.</h1>
+                  <h1 class="fw-bold">medicIndex.</h1>
                   <ul class="list-unstyled text-uppercase">
                     <li>open from 07:00 AM - 11:00 PM</li>
                     <li class="mb-3">New Delhi</li>
                   </ul>
-                  <span class="me-3"><i class="fa-brands fa-instagram"></i> Medicindex</span>
+                  <span class="me-3"><i class="fa-brands fa-instagram"></i> medicIndex</span>
                   <span><i class="fa-brands fa-whatsapp"></i> +6281234567</span>
                 </div>
               </div>

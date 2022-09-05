@@ -1,1 +1,1 @@
-# medicindex-site
+# medicIndex-site
