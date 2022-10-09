@@ -5,9 +5,9 @@ $(document).ready(function(){
     "ajax": "data.php?job=get_companies",
     "columns": [
       { "data": "rank" },
-      { "data": "company_name",   "sClass": "company_name" },
-      { "data": "industries" },
-      { "data": "revenue",        "sClass": "integer" },
+      { "data": "med_name",   "sClass": "med_name" },
+      { "data": "manufacturer" },
+      { "data": "mrp",        "sClass": "integer" },
       { "data": "fiscal_year",    "sClass": "integer" },
       { "data": "employees",      "sClass": "integer" },
       { "data": "market_cap",     "sClass": "integer" },
@@ -121,9 +121,9 @@ $(document).ready(function(){
     $('#form_company .field_container label.error').hide();
     $('#form_company .field_container').removeClass('valid').removeClass('error');
     $('#form_company #rank').val('');
-    $('#form_company #company_name').val('');
-    $('#form_company #industries').val('');
-    $('#form_company #revenue').val('');
+    $('#form_company #med_name').val('');
+    $('#form_company #manufacturer').val('');
+    $('#form_company #mrp').val('');
     $('#form_company #fiscal_year').val('');
     $('#form_company #employees').val('');
     $('#form_company #market_cap').val('');
@@ -154,8 +154,8 @@ $(document).ready(function(){
           // Reload datable
           table_companies.api().ajax.reload(function(){
             hide_loading_message();
-            var company_name = $('#company_name').val();
-            show_message("Company '" + company_name + "' added successfully.", 'success');
+            var med_name = $('#med_name').val();
+            show_message("Company '" + med_name + "' added successfully.", 'success');
           }, true);
         } else {
           hide_loading_message();
@@ -192,9 +192,9 @@ $(document).ready(function(){
         $('#form_company .field_container label.error').hide();
         $('#form_company .field_container').removeClass('valid').removeClass('error');
         $('#form_company #rank').val(output.data[0].rank);
-        $('#form_company #company_name').val(output.data[0].company_name);
-        $('#form_company #industries').val(output.data[0].industries);
-        $('#form_company #revenue').val(output.data[0].revenue);
+        $('#form_company #med_name').val(output.data[0].med_name);
+        $('#form_company #manufacturer').val(output.data[0].manufacturer);
+        $('#form_company #mrp').val(output.data[0].mrp);
         $('#form_company #fiscal_year').val(output.data[0].fiscal_year);
         $('#form_company #employees').val(output.data[0].employees);
         $('#form_company #market_cap').val(output.data[0].market_cap);
@@ -236,8 +236,8 @@ $(document).ready(function(){
           // Reload datable
           table_companies.api().ajax.reload(function(){
             hide_loading_message();
-            var company_name = $('#company_name').val();
-            show_message("Company '" + company_name + "' edited successfully.", 'success');
+            var med_name = $('#med_name').val();
+            show_message("Company '" + med_name + "' edited successfully.", 'success');
           }, true);
         } else {
           hide_loading_message();
@@ -254,8 +254,8 @@ $(document).ready(function(){
   // Delete company
   $(document).on('click', '.function_delete a', function(e){
     e.preventDefault();
-    var company_name = $(this).data('name');
-    if (confirm("Are you sure you want to delete '" + company_name + "'?")){
+    var med_name = $(this).data('name');
+    if (confirm("Are you sure you want to delete '" + med_name + "'?")){
       show_loading_message();
       var id      = $(this).data('id');
       var request = $.ajax({
@@ -270,7 +270,7 @@ $(document).ready(function(){
           // Reload datable
           table_companies.api().ajax.reload(function(){
             hide_loading_message();
-            show_message("Company '" + company_name + "' deleted successfully.", 'success');
+            show_message("Company '" + med_name + "' deleted successfully.", 'success');
           }, true);
         } else {
           hide_loading_message();

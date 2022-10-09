@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,5 +30,38 @@
     <p class="headingg m-0">medicIndex</p>
     
     <iframe class="airtable-embed" src="https://airtable.com/embed/shryoBuMUSSyQlckS?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+</body>
+</html> -->
+
+<?php
+
+//Step1
+ $db = mysqli_connect('localhost','root','','medicindex')
+ or die('Error connecting to MySQL server.');
+?>
+
+<html>
+ <head>
+ </head>
+ <body>
+ <h1>PHP connecting to MySQL</h1>
+
+<?php
+   
+//Step2
+$query = "SELECT * FROM `medinfo` ORDER BY `medinfo`.`Name` ASC";
+mysqli_query($db, $query) or die('Error querying database.');
+
+//Step3
+$result = mysqli_query($db, $query);
+
+while ($row = mysqli_fetch_array($result)) {
+ echo $row['Name'] . ' ' . $row['Type_of_Sell'] . ': ' . $row['Category'] . ' ' . $row['MRP'] .'<br />';
+}
+
+//Step 4
+mysqli_close($db);
+?>
+
 </body>
 </html>
