@@ -36,17 +36,17 @@ function showFooter() {
                 <div class="footer-title text-white">
                   <h1 class="fw-bold">medicIndex.</h1>
                   <ul class="list-unstyled text-uppercase">
-                    <li>open from 07:00 AM - 11:00 PM</li>
+                    
                     <li class="mb-3">New Delhi</li>
                   </ul>
                   <span class="me-3"><i class="fa-brands fa-instagram"></i> medicIndex</span>
-                  <span><i class="fa-brands fa-whatsapp"></i> +6281234567</span>
+                  <span><i class="fa-brands fa-linkedin"></i> medicIndex</span>
                 </div>
               </div>
             </div>
             <div class="text-footer text-white text-center">
               <p class="m-0">
-                Created with <i class="fa-solid fa-heart text-danger"></i> by <a href="https://www.instagram.com/gustutyoghantara/" target="_blank" class="text-warning">Carl Johnson</a> © 2022 Copyright | All Rights Reserved
+                Created with <i class="fa-solid fa-heart text-danger"></i> <a href="https://www.instagram.com/gustutyoghantara/" target="_blank" class="text-warning"></a> © 2022 Copyright | All Rights Reserved
               </p>
             </div>
           </div>`;
